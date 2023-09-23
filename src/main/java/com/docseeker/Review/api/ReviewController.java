@@ -28,7 +28,7 @@ public class ReviewController {
   public List<Review> fetchAll() {
     return reviewService.fetchAll();
   }
-  
+
   @PostMapping
   public ReviewResource save(@RequestBody CreateReviewResource resource) {
     return mapper.toResource(reviewService.save(mapper.toModel(resource)));
