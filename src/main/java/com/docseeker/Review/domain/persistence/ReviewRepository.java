@@ -11,4 +11,5 @@ import java.util.Optional;
 public interface ReviewRepository extends JpaRepository<Review, Integer> {
   /*List<Review> findByAssociatedDoctorId(int id);*/
     List<Review> findAllByAssociatedDoctor(int associatedDoctor);
+    
 }
