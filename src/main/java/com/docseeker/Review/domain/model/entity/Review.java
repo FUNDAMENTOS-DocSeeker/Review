@@ -13,6 +13,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Review {
+  
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;
