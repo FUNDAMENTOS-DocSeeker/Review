@@ -24,7 +24,7 @@ spring:
     #    JDBC : SGDB :// HOST : PORT / DB
     url: jdbc:postgresql://localhost:5432/BDD2
     username: postgres
-    password: 12345
+    password: admin
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     database: postgresql
