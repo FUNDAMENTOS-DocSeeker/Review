@@ -62,4 +62,10 @@ public class ReviewController {
       return ResponseEntity.notFound().build();
     }
   }
+
+  @Operation(summary = "Get reviews by associated doctor")
+    @GetMapping("/doctor/{id}")
+    public List<Review> getAllReviewsByAssociatedDoctor(@PathVariable int id){
+      return reviewService.findAllByAssociatedDoctor(id);
+  }
 }

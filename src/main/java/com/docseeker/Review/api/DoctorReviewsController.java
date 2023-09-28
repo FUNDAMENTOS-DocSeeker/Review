@@ -19,8 +19,8 @@ public class DoctorReviewsController {
         this.mapper = mapper;
     }
 
-    @GetMapping
+    /*@GetMapping
     public List<ReviewResource> getAllReviewsByAssociatedDoctor(@PathVariable int id){
         return mapper.toResourceList(reviewService.findAllByAssociatedDoctor(id));
-    }
+    }*/
 }
