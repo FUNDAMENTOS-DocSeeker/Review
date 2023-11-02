@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("api/v1/doctor/{id}/reviews")
+@RequestMapping("api/v1/reviews")
 public class DoctorReviewsController {
     private final ReviewService reviewService;
     private final ReviewMapper mapper;
