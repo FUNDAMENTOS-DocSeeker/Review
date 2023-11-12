@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://discovery-server:8761/eureka
 
 logging:
   level:
@@ -12,27 +12,15 @@ logging:
       hibernate:
         SQL: DEBUG
         type: TRACE
-#spring:
-#  datasource:
-#    password: password
-#    url: jdbc:mysql://localhost:3306/lc?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
-#    username: root
-#  jpa:
-#    hibernate:
-#      ddl-auto: update
-#    properties:
-#      hibernate:
-#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 
 spring:
   application:
     name: review-service
   datasource:
     driver-class-name: org.postgresql.Driver
-    #    JDBC : SGDB :// HOST : PORT / DB
-    url: jdbc:postgresql://localhost:5432/reviews
-    username: postgres
-    password: admin
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     database: postgresql
